@@ -147,7 +147,7 @@ class NotesService {
     await _ensureDbIsOpen();
     final db = _getDatabaseOrThrow();
     final result =
-        await db.query(userTable, limit: 1, where: 'e,ail =?', whereArgs: [
+        await db.query(userTable, limit: 1, where: 'email =?', whereArgs: [
       email.toLowerCase(),
     ]);
     if (result.isEmpty) {
