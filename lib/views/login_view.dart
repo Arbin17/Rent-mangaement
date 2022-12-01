@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants/routes.dart';
 import 'package:flutter_application_1/services/auth/auth_exceptions.dart';
 import 'package:flutter_application_1/services/auth/auth_service.dart';
+import 'package:flutter_application_1/views/forget_password_page.dart';
 
 import '../utilities/show_error_dialog.dart';
 
@@ -53,6 +54,28 @@ class _LoginViewState extends State<LoginView> {
             autocorrect: false,
             decoration: const InputDecoration(
               hintText: "Enter your Password",
+            ),
+          ),
+          SizedBox(
+            height: 10.0,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return ForgetPasswordPage();
+                  },
+                ),
+              );
+            },
+            child: Text(
+              "forgent password",
+              style: TextStyle(
+                color: Colors.blue,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           TextButton(
