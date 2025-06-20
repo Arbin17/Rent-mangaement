@@ -1,4 +1,4 @@
 # MyApps
 Rent Management System 
 
-Code are in Master baranch
+Code are in Master branche
